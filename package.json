@@ -1,0 +1,29 @@
+{
+  "name": "gmail-mcp-server",
+  "version": "1.0.0",
+  "description": "Local MCP server for connecting multiple Gmail accounts to Claude Desktop",
+  "private": true,
+  "type": "module",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "setup": "node dist/scripts/setup.js",
+    "add-account": "node dist/scripts/addAccount.js",
+    "smoke": "node dist/scripts/smoke.js",
+    "start": "node dist/src/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "googleapis": "^144.0.0",
+    "open": "^10.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
